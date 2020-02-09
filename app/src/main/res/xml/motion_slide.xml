@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="300">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorId="@+id/ib_show_slider"
+            app:touchAnchorSide="top" />
+    </Transition>
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="300">
+        <OnClick
+            app:clickAction="transitionToStart|transitionToEnd"
+            app:targetId="@+id/ib_show_slider" />
+    </Transition>
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/ll_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+        <Constraint
+            android:id="@+id/ib_show_slider"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toEndOf="@id/ll_steps"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0">
+            <Transform android:rotation="180"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>

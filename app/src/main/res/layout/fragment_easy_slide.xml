@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <de.mrapp.android.sidebar.Sidebar
+            android:id="@+id/sidebar_only"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            custom:animationSpeed="1.0"
+            custom:contentMode="scroll"
+            custom:contentOverlayColor="@android:color/black"
+            custom:contentOverlayTransparency="20%"
+            custom:contentView="@layout/content_view"
+            custom:dragModeWhenHidden="both"
+            custom:dragModeWhenShown="content_only"
+            custom:dragSensitivity="100%"
+            custom:dragThreshold="1%"
+            custom:hideOnBackButton="true"
+            custom:hideOnContentClick="false"
+            custom:location="left"
+            custom:maxSidebarOffset="100dp"
+            custom:maxSidebarWidth="600dp"
+            custom:scrollRatio="100%"
+            custom:showOnSidebarClick="true"
+            custom:showSidebar="false"
+            custom:sidebarBackground="@drawable/sidebar_background_left_light"
+            custom:sidebarElevation="8dp"
+            custom:sidebarOffset="0%"
+            custom:sidebarView="@layout/sidebar_view"
+            custom:sidebarWidth="30%"
+            tools:context=".EasySlideFragment" />
+
+        <ImageButton
+            android:id="@+id/btn_open_sidebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_forward_black_24dp" />
+    </RelativeLayout>
+</layout>
